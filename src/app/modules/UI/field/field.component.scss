@@ -1,0 +1,20 @@
+.field {
+  display: block;
+  margin: 4px 0;
+
+  &:hover {
+    background: red;
+  }
+
+  &__container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__data {
+    width: 30%;
+    text-align: end;
+  }
+
+}

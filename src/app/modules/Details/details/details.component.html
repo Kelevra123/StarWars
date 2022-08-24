@@ -1,0 +1,49 @@
+<div #container class="details__container">
+  <div class="details__wrapper">
+    <ng-container *ngIf="!loading">
+    <div class="details__head">
+      <div class="details__logo">
+        <img class="details__img" src={{character?.image}} alt="">
+      </div>
+    </div>
+    <div class="details__about">
+      <h1>{{character?.name}}</h1>
+    </div>
+    <div class="details__info">
+      <div class="details__stats">
+        <h1>Stats</h1>
+        <div class="field" [title]="'Gender:'" [data]="character?.gender || plug"></div>
+        <div class="field" [title]="'Born:'" [data]="character?.bornLocation || plug"></div>
+        <div class="field" [title]="'Homeland:'" [data]="character?.homeworld || plug"></div>
+        <div class="field" [title]="'Died:'" [data]="character?.died || plug"></div>
+        <div class="field" [title]="'Died location:'" [data]="character?.diedLocation || plug"></div>
+        <div class="field" [title]="'Eye color:'" [data]="character?.eyeColor || plug"></div>
+        <div class="field" [title]="'Hair color:'" [data]="character?.hairColor || plug"></div>
+        <div class="field" [title]="'Height:'" [data]="character?.height || plug"></div>
+        <div class="field" [title]="'Mass:'" [data]="character?.mass || plug"></div>
+      </div>
+      <div *ngIf="character?.affiliations?.length" class="details__bio">
+        <h1>Affiliations</h1>
+        <ul>
+          <li *ngFor="let aff of character?.affiliations">{{aff}}</li>
+        </ul>
+      </div>
+      <div *ngIf="character?.masters" class="details__masters">
+        <h1>Masters</h1>
+        <ul>
+          <li *ngFor="let master of character?.masters">{{master}}</li>
+        </ul>
+      </div>
+      <div class="details__text">
+        <h1>About</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut culpa distinctio exercitationem expedita fugiat harum hic, iste laboriosam minus molestiae perspiciatis quaerat quasi quia quo recusandae sed veritatis! Commodi dolores eius impedit iste, laudantium maxime nam nihil quasi totam ullam!</p>
+      </div>
+    </div>
+    </ng-container>
+    <ng-container *ngIf="loading">
+      <div class="details__loading">
+        <div class="spinner"></div>
+      </div>
+    </ng-container>
+  </div>
+</div>

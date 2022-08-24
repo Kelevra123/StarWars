@@ -1,0 +1,11 @@
+<div  #cardCont class="card-component__container">
+  <a class="card-component__route" href="" [routerLink]="['/details', char?.id]">
+    <div class="card-component__wrapper">
+      <div class="card-component__about">
+        <h1 class="card-component__title">{{char?.name}}</h1>
+        <span class="card-component__species">Species: {{char?.species}}</span>
+      </div>
+      <img class="card-component__image" src="{{char?.image}}" alt="No Photo">
+    </div>
+  </a>
+</div>

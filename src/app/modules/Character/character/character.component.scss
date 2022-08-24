@@ -1,0 +1,92 @@
+.character {
+  background: black;
+  color: white;
+
+  &__header {
+    height: 500px;
+    display: block;
+    background-image: url("https://wallpapers.com/images/high/star-wars-title-logo-3mx1btzmob79u7eo.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @media (width < 300px) {
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+  }
+
+  &__container {
+    width: 90%;
+    margin: auto;
+    min-height: 1350px;
+    padding: 2em 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  &__dropdown {
+    display: flex;
+    width: 50%;
+    margin: auto;
+    justify-content: space-around;
+
+    @media (width < 500px) {
+      margin: 0;
+      width: 100%;
+    }
+  }
+
+  &__search {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__find-field {
+    width: 80%;
+    margin: 1em;
+    border-radius: 25px;
+    padding: 0 20px;
+  }
+
+  &__obs {
+    display: block;
+    height: 50px;
+  }
+
+  &__error {
+    color: white;
+  }
+
+  &__top-button {
+
+    border-radius: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__icon {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    font-size: 40px;
+    z-index: 10;
+    transition: all 0.5s;
+
+    &:hover {
+      cursor: pointer;
+      color: red;
+    }
+  }
+
+  &__loading {
+    position: fixed;
+    left: 48%;
+    top: 60%
+  }
+
+}

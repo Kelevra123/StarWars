@@ -1,0 +1,99 @@
+.card-component {
+  width: 100%;
+  max-width: 300px;
+  margin: 2em;
+  min-height: 450px;
+
+  @media (width < 340px) {
+    margin: 2em 0.5em;
+  }
+
+  &__container {
+    //height: 100%;
+    -webkit-box-shadow: -2px 4px 8px 8px rgba(201, 1, 214, 0.41);
+    -moz-box-shadow: -2px 4px 8px 8px rgba(201, 1, 214, 0.41);
+    box-shadow: -2px 4px 8px 8px rgba(201, 1, 214, 0.41);
+    border-radius: 25px;
+    padding: 1em;
+    transition: all 0.3s;
+
+    &:hover {
+      -webkit-box-shadow: -2px 4px 8px 16px rgba(201, 1, 214, 0.41);
+      -moz-box-shadow: -2px 4px 8px 16px rgba(201, 1, 214, 0.41);
+      box-shadow: -2px 4px 8px 16px rgba(201, 1, 214, 0.41);
+      cursor: pointer;
+    }
+
+    &_empire {
+      -webkit-box-shadow: -2px 4px 8px 8px rgba(221, 14, 14, 0.41);
+      -moz-box-shadow: -2px 4px 8px 8px rgba(221, 14, 14, 0.41);
+      box-shadow: -2px 4px 8px 8px rgba(221, 14, 14, 0.41);
+
+      &:hover {
+        -webkit-box-shadow: -2px 4px 8px 16px rgba(221, 14, 14, 0.41);
+        -moz-box-shadow: -2px 4px 8px 16px rgba(221, 14, 14, 0.41);
+        box-shadow: -2px 4px 8px 16px rgba(221, 14, 14, 0.41);
+        cursor: pointer;
+      }
+    }
+
+    &_jedi {
+      -webkit-box-shadow: -2px 4px 8px 8px rgba(1, 214, 26, 0.41);
+      -moz-box-shadow: -2px 4px 8px 8px rgba(1, 214, 26, 0.41);
+      box-shadow: -2px 4px 8px 8px rgba(1, 214, 26, 0.41);
+
+      &:hover {
+        -webkit-box-shadow: -2px 4px 8px 16px rgba(1, 214, 26, 0.41);
+        -moz-box-shadow: -2px 4px 8px 16px rgba(1, 214, 26, 0.41);
+        box-shadow: -2px 4px 8px 16px rgba(1, 214, 26, 0.41);
+        cursor: pointer;
+      }
+    }
+
+    &_droid {
+      -webkit-box-shadow: -2px 4px 8px 8px rgba(1, 148, 214, 0.41);
+      -moz-box-shadow: -2px 4px 8px 8px rgba(1, 148, 214, 0.41);
+      box-shadow: -2px 4px 8px 8px rgba(1, 148, 214, 0.41);
+
+      &:hover {
+        -webkit-box-shadow: -2px 4px 8px 16px rgba(1, 148, 214, 0.41);
+        -moz-box-shadow: -2px 4px 8px 16px rgba(1, 148, 214, 0.41);
+        box-shadow: -2px 4px 8px 16px rgba(1, 148, 214, 0.41);
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__route {
+    text-decoration: none;
+    color: white;
+  }
+
+  &__wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__about {
+
+  }
+
+  &__title {
+    font-size: 1.3em;
+    text-align: center;
+  }
+
+  &__species {
+    display: block;
+    margin: 8px 0;
+    text-align: center;
+  }
+
+  &__image {
+    width: 100%;
+    height: 300px;
+  }
+
+}

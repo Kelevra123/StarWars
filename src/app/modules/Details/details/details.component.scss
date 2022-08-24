@@ -1,0 +1,128 @@
+.details {
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: black;
+
+    &_jedi {
+      background-image: url("https://wallpaperaccess.com/full/2101913.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &_droid {
+      background-image: url("https://i.pinimg.com/originals/df/ef/6a/dfef6a58974f7e25c5fc818254c59cc8.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &_sith {
+      background-image: url("https://img2.goodfon.com/wallpaper/nbig/b/d6/star-wars-sith-darth-vader.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &_default {
+      background-image: url("https://www.nawpic.com/media/2020/star-wars-nawpic-3-scaled.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &__wrapper {
+    width: 80%;
+    margin: auto;
+    min-height: 90vh;
+    background: rgba(0, 0, 0, 0.7);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 1em;
+  }
+
+  &__head {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    padding: 1em;
+    width: 100%;
+    height: 300px;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  &__about {
+    text-align: center;
+  }
+
+  &__info {
+    display: flex;
+    //justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 0 1em;
+
+    @media (width < 300px) {
+      padding: 0;
+    }
+  }
+
+  &__stats {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 600px;
+    padding: 0 1em;
+    border: 1px solid white;
+    margin: auto;
+  }
+
+  &__bio {
+    //padding: 0 1em;
+    width: 70%;
+    margin: 1em 0;
+
+    @media (width < 700px) {
+      width: 90%;
+    }
+  }
+
+  &__masters {
+    width: 30%;
+    margin: 1em 0;
+
+
+    @media (width < 700px) {
+      width: 90%;
+      margin: 0;
+    }
+  }
+
+  &__text {
+    h1 {
+      text-align: center;
+    }
+  }
+
+  &__loading {
+    align-self: center;
+  }
+
+  &__red {
+    background: red;
+  }
+
+}

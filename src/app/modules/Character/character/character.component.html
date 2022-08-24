@@ -1,0 +1,46 @@
+<div class="character__header"></div>
+<div *ngIf="!loading" class="character__control">
+  <div class="character__search">
+    <input class="character__find-field" (input)="search($event)" type="text">
+  </div>
+    <div class="character__dropdown">
+      <div class="character__check">
+        <div ngbDropdown class="d-inline-block">
+          <button type="button" class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>{{sortMethod}}</button>
+          <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+            <button ngbDropdownItem (click)="changeSortMethod('')">Clear</button>
+            <button ngbDropdownItem (click)="changeSortMethod('NAME')">Name</button>
+            <button ngbDropdownItem (click)="changeSortMethod('TYPE')">Type</button>
+          </div>
+        </div>
+      </div>
+      <div class="character__check">
+        <div ngbDropdown class="d-inline-block">
+          <button type="button" class="btn btn-outline-primary" id="dropdownBasic2" ngbDropdownToggle>{{filterMethod}}</button>
+          <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+            <button ngbDropdownItem (click)="changeFilterMethod('')">Clear</button>
+            <button ngbDropdownItem (click)="changeFilterMethod('DEAD')">Dead</button>
+            <button ngbDropdownItem (click)="changeFilterMethod('ALIVE')">Alive</button>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+<div class="character__container">
+  <ng-container *ngIf="!error">
+    <ng-container *ngFor="let char of infinityScrollData">
+      <div class="card-component" [char]="char"></div>
+    </ng-container>
+  </ng-container>
+  <p *ngIf="!infinityScrollData.length && !loading">Ничего не найдено</p>
+  <ng-container *ngIf="error">
+    <h1 class="character__error">Something gone wrong. Please refresh site by F5 button or check your internet connection</h1>
+  </ng-container>
+  <ng-container *ngIf="loading">
+    <div class="character__loading">
+      <div class="spinner"></div>
+    </div>
+  </ng-container>
+</div>
+<div #inter class="character__obs"></div>
+<fa-icon *ngIf="isButtonVisible" (click)="scroll($event)" class="character__icon" [icon]="faArrow"></fa-icon>
